@@ -1,0 +1,1070 @@
+/* addding font */
+
+/*NORMAL */
+
+@font-face {
+    font-family: "HK Grotesk";
+    src: url('./fonts/HKGrotesk-Regular.b526866.woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*Semi Bold*/
+@font-face {
+    font-family: "HK Grotesk";
+    src: url('./fonts/HKGrotesk-SemiBold.23cbed7.woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Sequel Sans VF Head";
+    src: url('./fonts/SequelSansVFHead-SemiBold.db11b12.woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/*BOLD*/
+@font-face {
+    font-family: "HK Grotesk";
+    src: url('./fonts/HKGrotesk-Bold.b1e5aaa.woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*BLACK*/
+@font-face {
+    font-family:"Sequel Sans VF Head";
+    src: url('./fonts/SequelSansVFHead-Black.777796c.woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Nav Bar*/
+
+body{
+    background-color:#1c2026;
+}
+
+/*selection color*/
+
+::-moz-selection{
+    background: #134e48;
+    color: #2dd4b8;
+}
+
+::selection{
+    background: #134e48;
+    color: #2dd4b8;
+}
+
+header{
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #151a1f;
+    background: dark;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background: #1c2026c2;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 24px;
+    height: 100%;
+}
+
+.logo-wrapper{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-wrapper img{
+    height:40px;
+}
+
+.menu-items{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-items a{
+    padding: 0 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: #D4D6D7;
+    font-size:14px;
+    font-family: "HK Grotesk",sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.menu-items a:hover{
+    background-color: #51555e;
+    color: #E5E6EB;
+}
+
+.pricing-nav{
+    position: relative;
+}
+
+/* .pricing-nav::after{
+    content: "";
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #E5E6EB;
+    opacity: 0.6;
+    visibility: visible;
+    transition: visibility 0.05s ease-in;
+}
+
+.pricing-nav:hover::after{
+    visibility: hidden;
+} */
+
+
+a.btn{
+    color: #2dd4b8;
+    border-radius: 6px;
+    border: 1px solid #2dd4b8;
+}
+
+a.btn:hover{
+    background-color: #115E5666;
+    color: #5EEAD0;
+}
+
+a.btn-fill{
+    background-color: #14b89f;
+    color: #151A1F;
+}
+
+a.btn-fill:hover{
+    background-color: #2DD4B8;
+    color: #151A1F;
+}
+
+/* Main */
+
+main{
+    background-color: #1c2026;
+}
+
+.container{
+    max-width: 1152px;
+    width: 100%;
+    padding: 0 32px;
+    margin: auto;
+}
+
+.main-content-wrapper{
+    padding: 96px 0;
+    height: 670px;
+    position: relative;
+}
+
+.content-img{
+    position: absolute;
+    width: 50%;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+}
+
+.content-text-wrapper{
+    padding: 80px 0 40px;
+    max-width: 768px;
+}
+
+.news-wrapper{
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.latest-news{
+    display: inline-block;
+    padding: 4px 0 4px 0;
+    background-color: #151a1f;
+    border-radius: 20px 0 0 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 100;
+    }
+}
+
+.news-icon{
+    height: 32px;
+    background-color: #2DD4B8;
+    border-radius: 20px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-family: "HK Grotesk",sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    
+}
+
+.news-icon img{
+    width: 14px;
+    height: 14px;
+}
+
+.news{
+    padding: 0 16px;
+    color: #FFF;
+    font-size: 14px;
+    font-family: "HK Grotesk",sans-serif;
+    font-weight: 600;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    transition: animation 0.1s ease-in;
+    background-color: #151a1f;
+    border-radius: 0 20px 20px 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.content-heading{
+    max-width: 768px;
+    width: 100%;
+    padding: 16px 0 0 0;
+}
+
+.content-heading h1{
+    font-family: "Sequel Sans VF Head";
+    font-size: 60px;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.content-desc{
+    margin-top: 16px;
+    color: #D4D6DF;
+}
+
+.content-desc p{
+    max-width: 384px;
+    font-family: "HK Grotesk",sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.625;
+}
+
+/* HDD plans */
+
+.hdd-heading{
+    font-family: "Sequel Sans VF Head",sans-serif;
+    color: #fff;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.hdd-heading h3{
+    font-size: 36px;
+}
+
+.hdd-plans p{
+    margin-top: 16px;
+    font-family: "HK Grotesk", sans-serif;
+    font-size: 20px;
+    color: #D4D6DF;
+    line-height: 1.75;
+}
+
+.hdd-tags{
+    display: flex;
+    gap: 8px;
+    height: 29px;
+}
+
+.hdd-tags p{
+    margin-top: 8px;
+    font-size: 12px;
+    padding: 0 6px;
+    background-color: #383c44;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    display: flex;
+    align-items: center;
+}
+
+/*plan pricing */
+
+.hdd-pricing{
+    margin-top: 48px;
+    display: flex;
+    gap: 16px;
+}
+
+.hdd-pricing .currency,
+.hdd-pricing .plan-duration{
+    display: flex;
+    align-items: center;
+    height: 32px;
+    background-color: #A0A4AF;
+    border-radius: 8px;
+}
+
+.currency .pricing,
+.plan-duration .duration{
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #151A1F;
+    font-size: 14px;
+    font-family: "HK Grotesk",sans-serif;
+    background-color: #A0A4AF;
+    height: 32px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pricing:hover{
+    background-color: #d4d6df;
+}
+
+.first{
+    border-radius: 8px 0 0 8px;
+}
+
+.last{
+    border-radius: 0 8px 8px 0;
+}
+
+.currency .selected{
+    background-color: #E5E6EB;
+}
+
+.plan-duration .selected{
+    background-color: #6f727d !important;
+    color: #f9fafb !important;
+}
+
+.plan-duration .duration{
+    color: #D4D6DB;
+    background-color: #383C44;
+}
+
+.duration:hover{
+    background-color: #51555E;
+}
+
+/* Essentials */
+
+.category-name{
+    margin-top:24px;
+    padding-bottom:24px;
+}
+
+.category-name.essential{
+    margin-top: 32px;
+}
+
+.category-heading-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.category-heading-wrapper h3{
+    font-size: 30px;
+    font-family: "Sequel Sans VF Head", sans-serif;
+    color: #fff;
+}
+
+.rocket-image{
+    height: 30px;
+    width: 30px;
+}
+
+/*PLAN CARD */
+
+.plan-catalogue{
+    display: flex;
+    gap: 16px;
+}
+
+.plan-catalogue .plan{
+    background-color: #25292F;
+    padding: 12px 24px;
+    border-radius: 8px;
+    min-width: 208px;
+    max-width: 208px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan .plan-details{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.plan h4{
+    color: #fff;
+    font-family: "Sequel Sans VF Head", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    height: 20px;
+    line-height: 1;
+}
+
+.plan span{
+    color: #D4D6DF;
+    font-family: "HK Grotesk",sans-serif;
+    font-size: 16px;
+    height: 21px;
+}
+
+.plan-name{
+    color: #14b89f;
+    font-size: 20px;
+    font-family: "Sequel Sans VF Head", sans-serif;
+    height: 64px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 900;
+}
+
+.plan-speed h4{
+    height: 24px;
+}
+
+.plan-services>span{
+    display: inline-block;
+    height: 24px;
+}
+
+.plan-services>div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.plan-availability span{
+    display: inline-block;
+    height: 24px;
+}
+
+.plan-availability .avail-title{
+    color: #14b89f;
+}
+
+.plan-price h4{
+    font-size: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.plan-price span{
+    font-size: 12px;
+}
+
+.order-btn{
+    height: 40px;
+    background-color: #14b89f;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #151A1F;
+    padding: 0 16px;
+    border-radius: 8px;
+    font-family: "HK Grotesk",sans-serif;
+    font-weight: 600;
+    margin-top: 16px;
+    max-width: 106px;
+    cursor: pointer;
+}
+
+.order-btn:hover{
+    background-color: #2dd4b8;
+}
+
+
+/*TANK STREAMING*/
+
+.tank-streaming .plan-name{
+    color: #DB2777;
+}
+
+.tank-streaming .avail-title{
+    color: #DB2777;
+}
+
+/* .tank-streaming{
+    display: grid;
+    grid-template-columns: repeat( 5, minmax(208px, 1fr));
+} */
+
+.tank-streaming .plan .plan-availability{
+    display: flex;
+    flex-direction: column;
+}
+
+.tank-streaming .order-btn{
+    background-color: #EC4599;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.order-btn img{
+    width: 14px;
+    height: 14px;
+}
+
+.tank-streaming .order-btn:hover{
+    background-color: #f472b6;
+}
+
+.plan.recommended{
+    transform: scale(1.05);
+    border: 4px solid #EC4599;
+    position: relative;
+}
+
+.plan .recommended-text{
+    background-color: #EC4599;
+    color: #151A1F;
+    border-radius:6px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "HK Grotesk",sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    position: absolute;
+    top: -15px;
+    width: 75%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+
+/*TANK STORAGE */
+
+.tank-storage .plan-name,
+.tank-storage .avail-title{
+    color:#8B5CF6;
+}
+
+.tank-storage .order-btn{
+    background-color: #A78BFA;
+}
+
+.tank-storage .order-btn:hover{
+    background-color: #CFB5FD;
+}
+
+.tank-storage .btn-disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.tank-storage .btn-disabled:hover{
+    background-color: #A78BFA;
+    opacity: 0.4;
+}
+
+/* NVME PLANS */
+
+.NVMe-plans{
+    margin-top: 64px;
+}
+
+.NVMe-heading{
+    font-family: "Sequel Sans VF Head",sans-serif;
+    color: #fff;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.NVMe-heading h3{
+    font-size: 36px;
+}
+
+.NVMe-plans p{
+    margin-top: 16px;
+    font-family: "HK Grotesk", sans-serif;
+    font-size: 20px;
+    color: #D4D6DF;
+    line-height: 1.75;
+}
+
+
+.NVMe-tags{
+    display: flex;
+    gap: 8px;
+    height: 29px;
+}
+
+.NVMe-tags p{
+    margin-top: 8px;
+    font-size: 12px;
+    padding: 0 6px;
+    background-color: #383c44;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    display: flex;
+    align-items: center;
+}
+
+/*NVME Plan pricing */
+
+.NVMe-pricing{
+    margin-top: 48px;
+    display: flex;
+    gap: 16px;
+}
+
+.NVMe-pricing .currency,
+.NVMe-pricing .plan-duration{
+    display: flex;
+    align-items: center;
+    height: 32px;
+    background-color: #A0A4AF;
+    border-radius: 8px;
+}
+
+.bolt-nvme .plan-name,
+.bolt-nvme .avail-title{
+    color: #EA592D;
+}
+
+.bolt-nvme .order-btn{
+    background-color: #EA592D;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.bolt-nvme .order-btn:hover{
+    background-color: #FB8D6C;
+}
+
+.bolt-nvme .plan-availability{
+    display: flex;
+    flex-direction: column;
+}
+
+.bolt{
+    padding-bottom: 6rem;
+}
+
+/* customer support */
+/*Security*/
+
+.customer-support-wrapper,
+.security-wrapper{
+    padding: 6rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Sequel Sans VF Head",sans-serif;
+    gap: 16px;
+}
+
+.customer-support-wrapper .heading-text h3,
+.security-wrapper h3{
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    background: linear-gradient(to right,#A78BFA, #F472B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    letter-spacing: 0.025rem;
+}
+
+.customer-support-wrapper .customer-support-heading h1,
+.security-heading h1{
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1;
+    color:#fff;
+    text-align: center;
+}
+
+.customer-support-text,
+.security-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer-support-wrapper .customer-support-text p,
+.security-text p{
+    font-size: 24px;
+    font-family: "HK Grotesk", sans-serif;
+    color: #D4D6DF;
+    width: 83.3%;
+    text-align: center;
+    line-height: 1.625;
+}
+
+/* cust-support-card */
+/*Security Cards*/
+
+.customer-support-cards,
+.security-cards{
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    justify-content: center;
+}
+
+.customer-support-card,
+.security-card{
+    padding: 32px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.customer-support-card:hover,
+.security-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px #0000001a, 0 10px 10px -5px #0000000a;
+}
+
+.customer-support-card .cust-card-img,
+.security-card .security-card-img{
+    height: 80px;
+}
+
+.customer-support-card .cust-card-heading,
+.security-card .security-card-heading{
+    margin-top: 16px;
+    font-size: 24px;
+    font-family: "Sequel Sans VF Head",sans-serif;
+    font-weight: 900;
+    color: #fff;
+}
+
+.cust-card-heading h4,
+.security-card-heading h4{
+    line-height: 1;
+}
+
+.customer-support-card .cust-card-text,
+.security-card .security-card-text{
+    font-size: 18px;
+    font-family: "HK Grotesk",sans-serif;
+    line-height: 1.75;
+    color: #D4D6DF;
+    margin-top: 16px;
+}
+
+.cust-card-links,
+.security-card-links{
+    color: #A78BFA;
+    font-family: "HK Grotesk",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 31.5px;
+}
+
+.cust-card-links p,
+.security-card-links p{
+    position: relative;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.cust-card-links p::after,
+.security-card-links p::after{
+    position: absolute;
+    bottom: 0;
+    left: -1px;
+    content: "";
+    background-color: #5b21b6;
+    cursor: pointer;
+    height: 12%;
+    width: 101%;
+    transition: height 0.2s ease-in;
+}
+
+.cust-card-links p:hover{
+    color: #DDD6FE;
+    z-index: 10;
+}
+
+.cust-card-links p:hover::after,
+.security-card-links p:hover::after{
+    height: 100%;
+    z-index: -1;
+}
+
+.no-margin-link{
+    margin-top: 0;
+}
+
+/* Support ticket count*/
+
+.support-background{
+    background-color: #151a1f;
+}
+
+.ticket-count-wrapper{
+    padding: 40px 0;
+    display: flex;
+}
+
+.ticket-count-desc{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Sequel Sans VF Head",sans-serif;
+    max-width: 40%;
+}
+
+.ticket-heading h4{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    background: linear-gradient(to right,#A78BFA, #F472B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    letter-spacing: 0.025rem;
+}
+
+.ticket-text{
+    margin-top: 16px;
+}
+
+.ticket-text p {
+    font-size: 20px;
+    font-family: "HK Grotesk", sans-serif;
+    color: #D4D6DF;
+    line-height: 1.625;
+}
+
+.ticket-count{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.count-number,
+.average-rply{
+    padding: 16px;
+}
+
+.ticket-count h5{
+    font-size: 60px;
+    font-family: "Sequel Sans VF Head",sans-serif;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+}
+
+.ticket-count p{
+    color: #D4D6DF;
+    font-size: 24px;
+    line-height: 1.65;
+    font-family: "HK Grotesk", sans-serif;
+}
+
+/*security and privacy*/
+
+.security-wrapper h3{
+    background: linear-gradient(to right,#14B89F, #22C55E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.security-card-links{
+    color: #14B89F;
+}
+
+.security-card-links p::after{
+    position: absolute;
+    bottom: 0;
+    left: -1px;
+    content: "";
+    background-color: #115E56;
+    cursor: pointer;
+    height: 12%;
+    width: 101%;
+    transition: height 0.2s ease-in;
+}
+
+.security-card-links p:hover{
+    color: #5eead0;
+    z-index: 10;
+}
+
+/*Footer*/
+
+footer .container{
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 24px;
+    height: 100%;
+}
+
+.footer-container{
+    padding: 48px 0;
+    display: flex;
+    gap: 32px;
+    font-family: "HK Grotesk",sans-serif;
+    color: #D4D6DF;
+    font-size: 16px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    max-width: 390px;
+}
+
+.about .footer-text{
+    line-height: 1.75;
+    letter-spacing: 0.025rem;
+    margin-top: 16px;
+}
+
+.about .ultra-footer-logo img{
+    height: 40px;
+}
+
+.about .contact-us{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 16px;
+    
+}
+
+.contact-us>div{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-us img{
+    height: 24.5px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.contact-us img:hover{
+    opacity: 1;
+}
+
+.footer-container .nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    width: 70%;
+}
+
+.nav ul{
+    list-style: none;
+}
+
+.nav ul li{
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    height: 24px;
+}
+
+.nav ul li:hover{
+    color: #14B89F;
+}
+
+.nav ul li.heading{
+    margin-top: 0;
+}
+
+.nav ul .heading h3{
+    color: #D4D6DF;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.7;
+    letter-spacing: 0.05rem;
+}
+
+.copyright{
+    padding:24px 0;
+    font-size: 16px;
+    color: #D4D6DF;
+    font-family: "HK Grotesk",sans-serif;
+    line-height: 1.625;
+    border-top: 1px solid #151a1f;
+}
+
+.copyright p{
+    padding: 8px 0;
+}
