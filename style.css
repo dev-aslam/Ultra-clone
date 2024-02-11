@@ -47,23 +47,61 @@
     box-sizing: border-box;
 }
 
+/*Varibles*/
+
+:root{
+    --primary-color:#2DD4B8;
+    --background-color:#1c2026;
+    --selection-background-color:#134e48;
+    --essential-color:#14B89F;
+
+    --font-family-text:"HK Grotesk",sans-serif;
+    --font-family-heading: "Sequel Sans VF Head",sans-serif;
+
+    --text-color:#151A1F;
+
+    --gap-small:16px;
+    --gap-medium:24px;
+    --gap-large:32px;
+    --gap-x-large:48px;
+    --gap-content:96px;
+}
+
 /* Nav Bar*/
 
 body{
-    background-color:#1c2026;
+    background-color: var(--background-color);
 }
 
 /*selection color*/
 
 ::-moz-selection{
-    background: #134e48;
-    color: #2dd4b8;
+    background: var(--selection-background-color);
+    color: var(--primary-color);
 }
 
 ::selection{
-    background: #134e48;
-    color: #2dd4b8;
+    background: var(--selection-background-color);
+    color: var(--primary-color);
 }
+
+/*Scroll bar */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #383c44;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: var(--background-color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #383c44;
+  }
 
 header{
     width: 100%;
@@ -85,7 +123,7 @@ nav{
     width: 100%;
     max-width: 1280px;
     margin: auto;
-    padding: 0 24px;
+    padding: 0 var(--gap-medium);
     height: 100%;
 }
 
@@ -102,17 +140,17 @@ nav{
 .menu-items{
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: var(--gap-small);
 }
 
 .menu-items a{
-    padding: 0 16px;
+    padding: 0 var(--gap-small);
     height: 40px;
     display: flex;
     align-items: center;
     color: #D4D6D7;
     font-size:14px;
-    font-family: "HK Grotesk",sans-serif;
+    font-family:var(--font-family-text);
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: 0.05em;
@@ -148,9 +186,9 @@ nav{
 
 
 a.btn{
-    color: #2dd4b8;
+    color: var(--primary-color);
     border-radius: 6px;
-    border: 1px solid #2dd4b8;
+    border: 1px solid var(--primary-color);
 }
 
 a.btn:hover{
@@ -159,30 +197,30 @@ a.btn:hover{
 }
 
 a.btn-fill{
-    background-color: #14b89f;
-    color: #151A1F;
+    background-color: var(--essential-color);
+    color: var(--text-color);
 }
 
 a.btn-fill:hover{
-    background-color: #2DD4B8;
-    color: #151A1F;
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 /* Main */
 
 main{
-    background-color: #1c2026;
+    background-color: var(--background-color);
 }
 
 .container{
     max-width: 1152px;
     width: 100%;
-    padding: 0 32px;
+    padding: 0 var(--gap-large);
     margin: auto;
 }
 
 .main-content-wrapper{
-    padding: 96px 0;
+    padding: var(--gap-content) 0;
     height: 670px;
     position: relative;
 }
@@ -202,7 +240,7 @@ main{
 }
 
 .news-wrapper{
-    margin-bottom: 24px;
+    margin-bottom: var(--gap-medium);
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -230,14 +268,14 @@ main{
 
 .news-icon{
     height: 32px;
-    background-color: #2DD4B8;
+    background-color: var(--primary-color);
     border-radius: 20px;
     padding: 0 12px;
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    font-family: "HK Grotesk",sans-serif;
+    font-family:var(--font-family-text);
     font-weight: 600;
     letter-spacing: 0.05rem;
     
@@ -249,10 +287,10 @@ main{
 }
 
 .news{
-    padding: 0 16px;
+    padding: 0 var(--gap-small);
     color: #FFF;
     font-size: 14px;
-    font-family: "HK Grotesk",sans-serif;
+    font-family:var(--font-family-text);
     font-weight: 600;
     animation: 1s ease-out 0s 1 slideInFromLeft;
     transition: animation 0.1s ease-in;
@@ -267,11 +305,11 @@ main{
 .content-heading{
     max-width: 768px;
     width: 100%;
-    padding: 16px 0 0 0;
+    padding: var(--gap-small) 0 0 0;
 }
 
 .content-heading h1{
-    font-family: "Sequel Sans VF Head";
+    font-family: var(--font-family-heading);
     font-size: 60px;
     color: #fff;
     line-height: 1;
@@ -279,22 +317,22 @@ main{
 }
 
 .content-desc{
-    margin-top: 16px;
+    margin-top: var(--gap-small);
     color: #D4D6DF;
 }
 
 .content-desc p{
     max-width: 384px;
-    font-family: "HK Grotesk",sans-serif;
+    font-family:var(--font-family-text);
     font-weight: 400;
-    font-size: 24px;
+    font-size: var(--gap-medium);
     line-height: 1.625;
 }
 
 /* HDD plans */
 
 .hdd-heading{
-    font-family: "Sequel Sans VF Head",sans-serif;
+    font-family: var(--font-family-heading);
     color: #fff;
     line-height: 1;
     font-weight: 600;
@@ -305,8 +343,8 @@ main{
 }
 
 .hdd-plans p{
-    margin-top: 16px;
-    font-family: "HK Grotesk", sans-serif;
+    margin-top: var(--gap-small);
+    font-family:var(--font-family-text);
     font-size: 20px;
     color: #D4D6DF;
     line-height: 1.75;
@@ -333,9 +371,9 @@ main{
 /*plan pricing */
 
 .hdd-pricing{
-    margin-top: 48px;
+    margin-top: var(--gap-x-large);
     display: flex;
-    gap: 16px;
+    gap: var(--gap-small);
 }
 
 .hdd-pricing .currency,
@@ -353,9 +391,9 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #151A1F;
+    color: var(--text-color);
     font-size: 14px;
-    font-family: "HK Grotesk",sans-serif;
+    font-family:var(--font-family-text);
     background-color: #A0A4AF;
     height: 32px;
     font-weight: 600;
@@ -395,24 +433,24 @@ main{
 /* Essentials */
 
 .category-name{
-    margin-top:24px;
-    padding-bottom:24px;
+    margin-top:var(--gap-medium);
+    padding-bottom:var(--gap-medium);
 }
 
 .category-name.essential{
-    margin-top: 32px;
+    margin-top: var(--gap-large);
 }
 
 .category-heading-wrapper{
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 32px;
+    margin-bottom: var(--gap-large);
 }
 
 .category-heading-wrapper h3{
     font-size: 30px;
-    font-family: "Sequel Sans VF Head", sans-serif;
+    font-family: var(--font-family-heading);
     color: #fff;
 }
 
@@ -425,12 +463,12 @@ main{
 
 .plan-catalogue{
     display: flex;
-    gap: 16px;
+    gap: var(--gap-small);
 }
 
 .plan-catalogue .plan{
     background-color: #25292F;
-    padding: 12px 24px;
+    padding: 12px var(--gap-medium);
     border-radius: 8px;
     min-width: 208px;
     max-width: 208px;
@@ -442,12 +480,12 @@ main{
 .plan .plan-details{
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--gap-medium);
 }
 
 .plan h4{
     color: #fff;
-    font-family: "Sequel Sans VF Head", sans-serif;
+    font-family: var(--font-family-heading);
     font-size: 20px;
     font-weight: 900;
     height: 20px;
@@ -456,15 +494,15 @@ main{
 
 .plan span{
     color: #D4D6DF;
-    font-family: "HK Grotesk",sans-serif;
+    font-family:var(--font-family-text);
     font-size: 16px;
     height: 21px;
 }
 
 .plan-name{
-    color: #14b89f;
+    color: var(--essential-color);
     font-size: 20px;
-    font-family: "Sequel Sans VF Head", sans-serif;
+    font-family: var(--font-family-heading);
     height: 64px;
     display: flex;
     justify-content: flex-start;
@@ -473,12 +511,12 @@ main{
 }
 
 .plan-speed h4{
-    height: 24px;
+    height: var(--gap-medium);
 }
 
 .plan-services>span{
     display: inline-block;
-    height: 24px;
+    height: var(--gap-medium);
 }
 
 .plan-services>div{
@@ -489,16 +527,16 @@ main{
 
 .plan-availability span{
     display: inline-block;
-    height: 24px;
+    height: var(--gap-medium);
 }
 
 .plan-availability .avail-title{
-    color: #14b89f;
+    color: var(--essential-color);
 }
 
 .plan-price h4{
-    font-size: 24px;
-    height: 24px;
+    font-size: var(--gap-medium);
+    height: var(--gap-medium);
     margin-bottom: 4px;
 }
 
@@ -508,27 +546,30 @@ main{
 
 .order-btn{
     height: 40px;
-    background-color: #14b89f;
+    background-color: var(--essential-color);
     font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #151A1F;
-    padding: 0 16px;
+    color: var(--text-color);
+    padding: 0 var(--gap-small);
     border-radius: 8px;
-    font-family: "HK Grotesk",sans-serif;
+    font-family:var(--font-family-text);
     font-weight: 600;
-    margin-top: 16px;
+    margin-top: var(--gap-small);
     max-width: 106px;
     cursor: pointer;
 }
 
 .order-btn:hover{
-    background-color: #2dd4b8;
+    background-color: var(--primary-color);
 }
 
 
 /*TANK STREAMING*/
+.tank-streaming-container .category-heading-wrapper{
+    margin-bottom: 0;
+}
 
 .tank-streaming .plan-name{
     color: #DB2777;
@@ -538,10 +579,14 @@ main{
     color: #DB2777;
 }
 
-/* .tank-streaming{
-    display: grid;
-    grid-template-columns: repeat( 5, minmax(208px, 1fr));
-} */
+.scroll-bar{
+    overflow-x: scroll;
+}
+
+.tank-streaming{
+    margin-top: 8px;
+    padding: var(--gap-x-large) 0;
+}
 
 .tank-streaming .plan .plan-availability{
     display: flex;
@@ -574,11 +619,11 @@ main{
 
 .plan .recommended-text{
     background-color: #EC4599;
-    color: #151A1F;
+    color: var(--text-color);
     border-radius:6px;
     text-transform: uppercase;
     font-size: 14px;
-    font-family: "HK Grotesk",sans-serif;
+    font-family:var(--font-family-text);
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -625,7 +670,7 @@ main{
 }
 
 .NVMe-heading{
-    font-family: "Sequel Sans VF Head",sans-serif;
+    font-family: var(--font-family-heading);
     color: #fff;
     line-height: 1;
     font-weight: 600;
@@ -636,8 +681,8 @@ main{
 }
 
 .NVMe-plans p{
-    margin-top: 16px;
-    font-family: "HK Grotesk", sans-serif;
+    margin-top: var(--gap-small);
+    font-family: var(--font-family-text);
     font-size: 20px;
     color: #D4D6DF;
     line-height: 1.75;
@@ -665,9 +710,9 @@ main{
 /*NVME Plan pricing */
 
 .NVMe-pricing{
-    margin-top: 48px;
+    margin-top: var(--gap-x-large);
     display: flex;
-    gap: 16px;
+    gap: var(--gap-small);
 }
 
 .NVMe-pricing .currency,
@@ -717,13 +762,13 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: "Sequel Sans VF Head",sans-serif;
-    gap: 16px;
+    font-family: var(--font-family-heading);
+    gap: var(--gap-small);
 }
 
 .customer-support-wrapper .heading-text h3,
 .security-wrapper h3{
-    font-size: 24px;
+    font-size: var(--gap-medium);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -753,8 +798,8 @@ main{
 
 .customer-support-wrapper .customer-support-text p,
 .security-text p{
-    font-size: 24px;
-    font-family: "HK Grotesk", sans-serif;
+    font-size: var(--gap-medium);
+    font-family: var(--font-family-text);
     color: #D4D6DF;
     width: 83.3%;
     text-align: center;
@@ -766,16 +811,16 @@ main{
 
 .customer-support-cards,
 .security-cards{
-    margin-top: 32px;
+    margin-top: var(--gap-large);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 32px;
+    gap: var(--gap-large);
     justify-content: center;
 }
 
 .customer-support-card,
 .security-card{
-    padding: 32px;
+    padding: var(--gap-large);
     cursor: pointer;
     transition: transform 0.2s ease;
 }
@@ -793,9 +838,9 @@ main{
 
 .customer-support-card .cust-card-heading,
 .security-card .security-card-heading{
-    margin-top: 16px;
-    font-size: 24px;
-    font-family: "Sequel Sans VF Head",sans-serif;
+    margin-top: var(--gap-small);
+    font-size: var(--gap-medium);
+    font-family: var(--font-family-heading);
     font-weight: 900;
     color: #fff;
 }
@@ -808,16 +853,16 @@ main{
 .customer-support-card .cust-card-text,
 .security-card .security-card-text{
     font-size: 18px;
-    font-family: "HK Grotesk",sans-serif;
+    font-family:var(--font-family-text);
     line-height: 1.75;
     color: #D4D6DF;
-    margin-top: 16px;
+    margin-top: var(--gap-small);
 }
 
 .cust-card-links,
 .security-card-links{
     color: #A78BFA;
-    font-family: "HK Grotesk",sans-serif;
+    font-family:var(--font-family-text);
     font-size: 16px;
     font-weight: 600;
     margin-top: 31.5px;
@@ -873,7 +918,7 @@ main{
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-family: "Sequel Sans VF Head",sans-serif;
+    font-family: var(--font-family-heading);
     max-width: 40%;
 }
 
@@ -891,12 +936,12 @@ main{
 }
 
 .ticket-text{
-    margin-top: 16px;
+    margin-top: var(--gap-small);
 }
 
 .ticket-text p {
     font-size: 20px;
-    font-family: "HK Grotesk", sans-serif;
+    font-family: var(--font-family-text);
     color: #D4D6DF;
     line-height: 1.625;
 }
@@ -909,12 +954,12 @@ main{
 
 .count-number,
 .average-rply{
-    padding: 16px;
+    padding: var(--gap-small);
 }
 
 .ticket-count h5{
     font-size: 60px;
-    font-family: "Sequel Sans VF Head",sans-serif;
+    font-family: var(--font-family-heading);
     font-weight: 900;
     color: #fff;
     text-align: center;
@@ -922,9 +967,9 @@ main{
 
 .ticket-count p{
     color: #D4D6DF;
-    font-size: 24px;
+    font-size: var(--gap-medium);
     line-height: 1.65;
-    font-family: "HK Grotesk", sans-serif;
+    font-family: var(--font-family-text);
 }
 
 /*security and privacy*/
@@ -962,15 +1007,15 @@ footer .container{
     width: 100%;
     max-width: 1280px;
     margin: auto;
-    padding: 0 24px;
+    padding: 0 var(--gap-medium);
     height: 100%;
 }
 
 .footer-container{
-    padding: 48px 0;
+    padding: var(--gap-x-large) 0;
     display: flex;
-    gap: 32px;
-    font-family: "HK Grotesk",sans-serif;
+    gap: var(--gap-large);
+    font-family:var(--font-family-text);
     color: #D4D6DF;
     font-size: 16px;
 }
@@ -985,7 +1030,7 @@ footer .container{
 .about .footer-text{
     line-height: 1.75;
     letter-spacing: 0.025rem;
-    margin-top: 16px;
+    margin-top: var(--gap-small);
 }
 
 .about .ultra-footer-logo img{
@@ -996,7 +1041,7 @@ footer .container{
     display: flex;
     gap: 8px;
     align-items: center;
-    margin-top: 16px;
+    margin-top: var(--gap-small);
     
 }
 
@@ -1022,7 +1067,7 @@ footer .container{
 .footer-container .nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 32px;
+    gap: var(--gap-large);
     width: 70%;
 }
 
@@ -1031,13 +1076,13 @@ footer .container{
 }
 
 .nav ul li{
-    margin-top: 16px;
+    margin-top: var(--gap-small);
     font-size: 16px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
     transition: color 0.2s ease;
-    height: 24px;
+    height: var(--gap-medium);
 }
 
 .nav ul li:hover{
@@ -1057,10 +1102,10 @@ footer .container{
 }
 
 .copyright{
-    padding:24px 0;
+    padding:var(--gap-medium) 0;
     font-size: 16px;
     color: #D4D6DF;
-    font-family: "HK Grotesk",sans-serif;
+    font-family:var(--font-family-text);
     line-height: 1.625;
     border-top: 1px solid #151a1f;
 }
