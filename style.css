@@ -581,6 +581,7 @@ main{
 
 .scroll-bar{
     overflow-x: scroll;
+    width: 70vw;
 }
 
 .tank-streaming{
